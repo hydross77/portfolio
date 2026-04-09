@@ -127,7 +127,7 @@ export const clients = [
 ]
 
 export const skills = [
-  { category: "Frontend", items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind"] },
+  { category: "Frontend", items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind", "Mobile First"] },
   { category: "Backend", items: ["PHP", "Symfony", "Python", "Mercure"] },
   { category: "DevOps & Tools", items: ["Docker", "n8n", "Robocorp", "GitHub"] },
   { category: "AI & 3D", items: ["Claude", "Three.js", "WebGL", "GSAP"] },
@@ -138,9 +138,9 @@ export const bio = {
   tagline: "I eat bugs for breakfast and ship features for lunch.",
   role: "Builder. Automatiseur. Cerveau en surchauffe.",
   intro:
-    "Je n'ai pas appris à coder en école. J'ai appris en contribuant à un jeu — Slayers Online, un MMORPG 2D pixelisé en JavaScript. J'avais l'âge où on joue, mais j'ai préféré comprendre comment ça marchait derrière.",
+    "29 ans. Autodidacte. Je n'ai pas appris à coder en école — j'ai appris en contribuant à un jeu. Slayers Online, un MMORPG 2D pixelisé en JavaScript. J'avais l'âge où on joue, mais j'ai préféré comprendre comment ça marchait derrière.",
   about:
-    "Depuis, je n'ai pas arrêté. Tout en autodidacte, tout en natif. Pas de diplôme — juste de la curiosité compulsive et des nuits entières à débugger des trucs que je m'étais créés moi-même. Aujourd'hui je code, j'automatise, j'intègre de l'IA. J'ai bossé en agence, en studio créatif, en freelance. Et j'ai monté ma propre agence web.",
+    "Depuis, je n'ai pas arrêté. Tout en natif, tout en self-made. Pas de diplôme — juste de la curiosité compulsive et des nuits entières à débugger des trucs que je m'étais créés moi-même. Je code mobile first, j'automatise ce qui prend trop de temps, j'intègre de l'IA là où ça a du sens. J'ai bossé en agence, en studio créatif, en freelance. Et j'ai monté ma propre agence web.",
   github: "https://github.com/hydross77",
   email: "tiffany.dellmann@gmail.com",
 }
