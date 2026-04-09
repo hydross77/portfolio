@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { skills, bio } from "@/lib/data"
+import { bio } from "@/lib/data"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,7 +11,6 @@ export default function About() {
   const sectionRef = useRef<HTMLElement>(null)
   const leftRef = useRef<HTMLDivElement>(null)
   const rightRef = useRef<HTMLDivElement>(null)
-  const skillsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -22,10 +21,6 @@ export default function About() {
       gsap.from(rightRef.current, {
         x: 60, opacity: 0, duration: 1, ease: "power3.out", delay: 0.15,
         scrollTrigger: { trigger: sectionRef.current, start: "top 70%" },
-      })
-      gsap.from(skillsRef.current?.children ?? [], {
-        y: 30, opacity: 0, duration: 0.6, stagger: 0.1, ease: "power3.out",
-        scrollTrigger: { trigger: skillsRef.current, start: "top 80%" },
       })
     }, sectionRef)
 
@@ -111,24 +106,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Skills */}
-        <div ref={skillsRef} className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
-          {skills.map((group) => (
-            <div key={group.category}>
-              <h3 className="text-white/25 uppercase mb-3" style={{ fontFamily: "monospace", fontSize: "9px", letterSpacing: "4px" }}>
-                {group.category}
-              </h3>
-              <ul className="flex flex-col gap-1.5">
-                {group.items.map((item) => (
-                  <li key={item} className="text-white/55 flex items-center gap-2" style={{ fontFamily: "var(--font-body)", fontSize: "13px" }}>
-                    <span className="w-1 h-1 rounded-full bg-[#c0392b] flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )
