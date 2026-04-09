@@ -96,8 +96,8 @@ export default function Experience() {
               <p className="text-white/60 mb-1" style={{ fontFamily: "var(--font-body)", fontSize: "14px", lineHeight: 1.7 }}>
                 Dev web, automatisation, intégration IA — je prends des missions freelance.
               </p>
-              <a href="mailto:tiffany.dellmann@gmail.com" className="inline-flex items-center gap-2 text-[#c0392b]/70 hover:text-[#c0392b] text-xs uppercase tracking-widest transition-colors mt-3" style={{ fontFamily: "monospace" }}>
-                Me contacter ↗
+              <a href="https://wa.me/33615431256" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#c0392b]/70 hover:text-[#c0392b] text-xs uppercase tracking-widest transition-colors mt-3" style={{ fontFamily: "monospace" }}>
+                WhatsApp ↗
               </a>
             </div>
             <div className="border border-white/6 p-6 bg-white/[0.02]">
@@ -105,7 +105,7 @@ export default function Experience() {
               <p className="text-white/50" style={{ fontFamily: "var(--font-body)", fontSize: "14px", lineHeight: 1.7 }}>
                 Agence web indépendante. Du travail sérieux, sans les tarifs des grands groupes.
               </p>
-              <a href="mailto:tiffany.dellmann@gmail.com" className="inline-flex items-center gap-2 text-white/28 hover:text-white text-xs uppercase tracking-widest transition-colors mt-3" style={{ fontFamily: "monospace" }}>
+              <a href="https://wa.me/33615431256" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white/28 hover:text-white text-xs uppercase tracking-widest transition-colors mt-3" style={{ fontFamily: "monospace" }}>
                 Discutons ↗
               </a>
             </div>

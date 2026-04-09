@@ -136,11 +136,13 @@ export default function Hero() {
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </button>
           <a
-            href="mailto:tiffany.dellmann@gmail.com"
+            href="https://wa.me/33615431256"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white/35 hover:text-white text-xs uppercase tracking-widest transition-colors duration-300 border-b border-white/15 pb-px hover:border-white"
             style={{ fontFamily: "monospace" }}
           >
-            Me contacter
+            WhatsApp
           </a>
         </div>
       </div>

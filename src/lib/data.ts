@@ -142,10 +142,10 @@ export const bio = {
   about:
     "Depuis, je n'ai pas arrêté. Tout en natif, tout en self-made. Pas de diplôme — juste de la curiosité compulsive et des nuits entières à débugger des trucs que je m'étais créés moi-même. Je code mobile first, j'automatise ce qui prend trop de temps, j'intègre de l'IA là où ça a du sens. J'ai bossé en agence, en studio créatif, en freelance. Et j'ai monté ma propre agence web.",
   github: "https://github.com/hydross77",
-  email: "tiffany.dellmann@gmail.com",
+  whatsapp: "https://wa.me/33615431256",
 }
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/hydross77" },
-  { label: "Email", href: "mailto:tiffany.dellmann@gmail.com" },
+  { label: "WhatsApp", href: "https://wa.me/33615431256" },
 ]
