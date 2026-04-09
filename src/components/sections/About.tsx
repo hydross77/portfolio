@@ -46,7 +46,7 @@ export default function About() {
         01
       </div>
 
-      <div className="wrap relative z-10">
+      <div className="relative z-10" style={{ width: "100%", maxWidth: "1280px", marginLeft: "auto", marginRight: "auto", paddingLeft: "clamp(1.5rem, 7vw, 8rem)", paddingRight: "clamp(1.5rem, 7vw, 8rem)" }}>
         {/* Label */}
         <div className="flex items-center gap-4 mb-16">
           <span className="block w-8 h-px bg-[#c0392b]" />

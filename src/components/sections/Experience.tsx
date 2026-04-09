@@ -24,8 +24,8 @@ export default function Experience() {
         scrollTrigger: { trigger: listRef.current, start: "top 80%" },
       })
       gsap.from(clientsRef.current?.children ?? [], {
-        y: 40, opacity: 0, duration: 0.6, stagger: 0.08, ease: "power3.out",
-        scrollTrigger: { trigger: clientsRef.current, start: "top 80%" },
+        y: 40, duration: 0.6, stagger: 0.08, ease: "power3.out",
+        scrollTrigger: { trigger: clientsRef.current, start: "top 85%" },
       })
     }, sectionRef)
 
@@ -46,7 +46,7 @@ export default function Experience() {
         EXP
       </div>
 
-      <div className="wrap relative z-10">
+      <div className="relative z-10" style={{ width: "100%", maxWidth: "1280px", marginLeft: "auto", marginRight: "auto", paddingLeft: "clamp(1.5rem, 7vw, 8rem)", paddingRight: "clamp(1.5rem, 7vw, 8rem)" }}>
         {/* Header */}
         <div ref={headerRef} className="flex items-center gap-4 mb-16">
           <span className="block w-8 h-px bg-[#c0392b]" />
@@ -101,12 +101,12 @@ export default function Experience() {
               </a>
             </div>
             <div className="border border-white/6 p-6 bg-white/[0.02]">
-              <div className="text-white/22 mb-2" style={{ fontFamily: "monospace", fontSize: "9px", letterSpacing: "4px" }}>VAGA STUDIO</div>
+              <div className="text-white/22 mb-2" style={{ fontFamily: "monospace", fontSize: "9px", letterSpacing: "4px" }}>AURYX</div>
               <p className="text-white/50" style={{ fontFamily: "var(--font-body)", fontSize: "14px", lineHeight: 1.7 }}>
-                Agence web indépendante. Du travail sérieux, sans les tarifs des grands groupes.
+                Collectif de passionnés. On construit des projets web entre amis, à côté.
               </p>
-              <a href="https://wa.me/33615431256" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white/28 hover:text-white text-xs uppercase tracking-widest transition-colors mt-3" style={{ fontFamily: "monospace" }}>
-                Discutons ↗
+              <a href="https://auryx.fr" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white/28 hover:text-white text-xs uppercase tracking-widest transition-colors mt-3" style={{ fontFamily: "monospace" }}>
+                auryx.fr ↗
               </a>
             </div>
           </div>

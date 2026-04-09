@@ -95,7 +95,7 @@ export default function Contact() {
         繋
       </div>
 
-      <div ref={contentRef} className="wrap relative z-10">
+      <div ref={contentRef} className="relative z-10" style={{ width: "100%", maxWidth: "1280px", marginLeft: "auto", marginRight: "auto", paddingLeft: "clamp(1.5rem, 7vw, 8rem)", paddingRight: "clamp(1.5rem, 7vw, 8rem)" }}>
         {/* Label */}
         <div className="flex items-center gap-4 mb-12">
           <span className="block w-8 h-px bg-[#c0392b]" />
@@ -135,13 +135,12 @@ export default function Contact() {
 
         {/* No LinkedIn */}
         <p className="text-white/15 border-l-2 border-white/8 pl-4 max-w-md" style={{ fontFamily: "monospace", fontSize: "10px", lineHeight: 1.8, letterSpacing: "1px" }}>
-          Pas de LinkedIn. Les réseaux corporate ne sont pas mon truc.<br />
-          Mon travail parle pour moi — regarde ce que je construis.
+          Pas de LinkedIn. Les réseaux corporate ne sont pas mon truc.
         </p>
       </div>
 
       {/* Footer */}
-      <div className="wrap absolute bottom-8 left-0 right-0 flex items-center justify-between">
+      <div className="absolute bottom-8 left-0 right-0 flex items-center justify-between" style={{ paddingLeft: "clamp(1.5rem, 7vw, 8rem)", paddingRight: "clamp(1.5rem, 7vw, 8rem)" }}>
         <span className="text-white/12" style={{ fontFamily: "monospace", fontSize: "10px", letterSpacing: "2px" }}>
           © {new Date().getFullYear()} VAGA
         </span>

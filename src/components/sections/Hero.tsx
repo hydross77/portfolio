@@ -77,7 +77,7 @@ export default function Hero() {
       <div className="absolute top-0 bottom-0 w-px bg-white/[0.04] z-[2]" style={{ left: "8vw" }} />
 
       {/* Content */}
-      <div className="wrap relative z-10">
+      <div className="relative z-10" style={{ width: "100%", maxWidth: "1280px", marginLeft: "auto", marginRight: "auto", paddingLeft: "clamp(1.5rem, 7vw, 8rem)", paddingRight: "clamp(1.5rem, 7vw, 8rem)" }}>
         {/* Label */}
         <div ref={labelRef} className="flex items-center gap-4 mb-8">
           <span className="block w-8 h-px bg-[#c0392b]" />

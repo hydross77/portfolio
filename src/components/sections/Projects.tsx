@@ -89,7 +89,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative min-h-screen flex flex-col justify-center px-8 md:px-20 py-32 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center py-32 overflow-hidden"
     >
       {/* BG number */}
       <div
@@ -99,7 +99,7 @@ export default function Projects() {
         02
       </div>
 
-      <div className="wrap relative z-10">
+      <div className="relative z-10" style={{ width: "100%", maxWidth: "1280px", marginLeft: "auto", marginRight: "auto", paddingLeft: "clamp(1.5rem, 7vw, 8rem)", paddingRight: "clamp(1.5rem, 7vw, 8rem)" }}>
         {/* Header */}
         <div ref={headerRef}>
           <div className="flex items-center gap-4 mb-5">

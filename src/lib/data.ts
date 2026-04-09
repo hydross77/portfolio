@@ -49,11 +49,11 @@ export const projects = [
 
 export const experience = [
   {
-    company: "VAGA Studio",
-    role: "Fondateur & Développeur",
+    company: "Auryx",
+    role: "Co-fondatrice",
     period: "En cours",
     description:
-      "Direction technique et créative d'une agence web indépendante. Conception, développement et livraison de projets clients end-to-end.",
+      "Collectif de passionnés — on construit des projets web à côté, entre amis. auryx.fr",
     current: true,
   },
   {
@@ -136,7 +136,7 @@ export const skills = [
 export const bio = {
   name: "VAGA",
   tagline: "I eat bugs for breakfast and ship features for lunch.",
-  role: "Builder. Automatiseur. Cerveau en surchauffe.",
+  role: "Builder. Automatisatrice. Cerveau en surchauffe.",
   intro:
     "29 ans. Autodidacte. Je n'ai pas appris à coder en école — j'ai appris en contribuant à un jeu. Slayers Online, un MMORPG 2D pixelisé en JavaScript. J'avais l'âge où on joue, mais j'ai préféré comprendre comment ça marchait derrière.",
   about:
