@@ -6,7 +6,10 @@
       "Bash(npm install:*)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:api.github.com)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(npm run:*)",
+      "WebFetch(domain:portfolio-alpha-nine-la3ktpjafs.vercel.app)"
     ]
   }
 }
