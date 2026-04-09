@@ -1,33 +1,89 @@
 export const projects = [
   {
+    id: "00",
+    title: "Slayer Online",
+    description:
+      "L'origine. Une contribution à Slayers Online, un MMORPG 2D pixelisé en JavaScript. Adolescente, sans formation, sans tutoriel — juste la curiosité de comprendre comment un monde en ligne fonctionne derrière. C'est ça qui a tout déclenché.",
+    tech: ["JavaScript", "HTML", "CSS"],
+    demo: "#",
+    github: "#",
+    year: "Ado",
+    classified: false,
+    origin: true,
+  },
+  {
     id: "I",
     title: "Neji",
     description:
-      "Un projet frontend HTML/CSS porté sur l'esthétique anime — vitrine de maîtrise du markup et du design orienté ambiance.",
+      "Vitrine frontend à l'esthétique anime. Le seul projet public — le reste est classifié.",
     tech: ["HTML", "CSS", "JavaScript"],
     demo: "https://hydross77.github.io/neji",
     github: "https://github.com/hydross77/neji",
     year: "2026",
+    classified: false,
+    origin: false,
   },
   {
     id: "II",
-    title: "Bankai Engine",
-    description:
-      "Moteur de rendu 3D temps réel pour le web, avec support shader GLSL et pipeline de rendu personnalisable.",
-    tech: ["Three.js", "WebGL", "GLSL", "Vite"],
+    title: "Accès restreint",
+    description: "Projet privé. Dossier scellé.",
+    tech: [],
     demo: "#",
     github: "#",
-    year: "2025",
+    year: "——",
+    classified: true,
+    origin: false,
   },
   {
     id: "III",
-    title: "Reiatsu Flow",
-    description:
-      "Pipeline d'automatisation intelligent couplant n8n, des agents Claude et des workflows Symfony pour orchestrer des tâches complexes.",
-    tech: ["n8n", "Claude", "Symfony", "PHP"],
+    title: "Accès restreint",
+    description: "Projet privé. Dossier scellé.",
+    tech: [],
     demo: "#",
     github: "#",
-    year: "2025",
+    year: "——",
+    classified: true,
+    origin: false,
+  },
+]
+
+export const experience = [
+  {
+    company: "VAGA Studio",
+    role: "Fondateur & Développeur",
+    period: "En cours",
+    description:
+      "Direction technique et créative d'une agence web indépendante. Conception, développement et livraison de projets clients end-to-end.",
+    current: true,
+  },
+  {
+    company: "MALT",
+    role: "Développeur Freelance",
+    period: "En cours",
+    description:
+      "Missions freelance full-stack et intégration IA pour des clients variés. Disponible pour de nouvelles missions.",
+    current: true,
+  },
+  {
+    company: "Digital Studio",
+    role: "Développeur",
+    period: "——",
+    description: "Développement d'interfaces et d'applications web.",
+    current: false,
+  },
+  {
+    company: "Studio Saglio",
+    role: "Développeur",
+    period: "——",
+    description: "Projets créatifs et expériences digitales.",
+    current: false,
+  },
+  {
+    company: "Est Pare Brise",
+    role: "Développeur Web",
+    period: "——",
+    description: "Développement et maintenance web pour le groupe.",
+    current: false,
   },
 ]
 
@@ -41,16 +97,18 @@ export const skills = [
 export const bio = {
   name: "VAGA",
   tagline: "I eat bugs for breakfast and ship features for lunch.",
-  role: "Développeur Full-Stack & Intégrateur IA",
+  role: "Builder. Automatiseur. Cerveau en surchauffe.",
   intro:
-    "Je construis des interfaces que les gens ne veulent pas fermer, des backends que les serveurs ne veulent pas arrêter, et des automations qui tournent pendant que je dors.",
+    "Je n'ai pas appris à coder en école. J'ai appris en contribuant à un jeu — Slayers Online, un MMORPG 2D pixelisé en JavaScript. J'avais l'âge où on joue, mais j'ai préféré comprendre comment ça marchait derrière.",
+  about:
+    "Depuis, je n'ai pas arrêté. Tout en autodidacte, tout en natif. Pas de diplôme — juste de la curiosité compulsive et des nuits entières à débugger des trucs que je m'étais créés moi-même. Aujourd'hui je code, j'automatise, j'intègre de l'IA. J'ai bossé en agence, en studio créatif, en freelance sur MALT. Et j'ai monté ma propre agence web.",
   github: "https://github.com/hydross77",
-  linkedin: "#",
-  email: "contact@vaga.dev",
+  email: "tiffany.dellmann@gmail.com",
+  malt: "https://www.malt.fr",
 }
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/hydross77" },
-  { label: "LinkedIn", href: "#" },
-  { label: "Email", href: "mailto:contact@vaga.dev" },
+  { label: "MALT", href: "https://www.malt.fr" },
+  { label: "Email", href: "mailto:tiffany.dellmann@gmail.com" },
 ]
