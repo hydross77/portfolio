@@ -3,15 +3,14 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { projects } from "@/lib/data"
+import { skills } from "@/lib/data"
 
 gsap.registerPlugin(ScrollTrigger)
 
-function ProjectCard({ project }: { project: (typeof projects)[0] }) {
+function TechCard({ group }: { group: { category: string; items: string[] } }) {
   const cardRef = useRef<HTMLDivElement>(null)
 
   const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (project.classified) return
     const card = cardRef.current
     if (!card) return
     const rect = card.getBoundingClientRect()
@@ -21,45 +20,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   }
 
   const onMouseLeave = () => {
-    if (project.classified) return
     gsap.to(cardRef.current, { rotateY: 0, rotateX: 0, duration: 0.5, ease: "power3.out" })
-  }
-
-  if (project.classified) {
-    return (
-      <div
-        ref={cardRef}
-        className="relative border border-white/4 bg-white/[0.01] p-8 select-none"
-        style={{ transformStyle: "preserve-3d" }}
-      >
-        {/* Scanline overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.03]"
-          style={{
-            backgroundImage: "repeating-linear-gradient(0deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 4px)",
-          }}
-        />
-        <div className="flex items-start justify-between mb-8">
-          <span className="text-white/8" style={{ fontFamily: "var(--font-cinzel)", fontSize: "36px", fontWeight: 900, lineHeight: 1 }}>
-            {project.id}
-          </span>
-          <span className="text-[#c0392b]/30 border border-[#c0392b]/20 px-2 py-0.5" style={{ fontFamily: "monospace", fontSize: "9px", letterSpacing: "3px" }}>
-            CLASSIFIÉ
-          </span>
-        </div>
-        <h3
-          className="mb-4"
-          style={{ fontFamily: "var(--font-cinzel)", fontSize: "22px", fontWeight: 700, color: "rgba(255,255,255,0.12)" }}
-        >
-          {project.title}
-        </h3>
-        <p style={{ fontFamily: "monospace", fontSize: "12px", color: "rgba(255,255,255,0.15)", letterSpacing: "2px" }}>
-          Dossier scellé. Accès refusé.
-        </p>
-        {/* Lock icon */}
-        <div className="mt-10 text-white/8 text-4xl select-none">⊘</div>
-      </div>
-    )
   }
 
   return (
@@ -67,61 +28,33 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       ref={cardRef}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
-      className="relative group border border-white/6 bg-white/[0.02] p-8 transition-colors duration-300 hover:border-[#c0392b]/40 hover:bg-white/[0.04]"
+      className="relative group border border-white/6 bg-white/[0.02] p-7 transition-colors duration-300 hover:border-[#c0392b]/40 hover:bg-white/[0.04]"
       style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="flex items-start justify-between mb-8">
-        <span className="text-white/12" style={{ fontFamily: "var(--font-cinzel)", fontSize: "36px", fontWeight: 900, lineHeight: 1 }}>
-          {project.id}
-        </span>
-        <span className="text-white/22" style={{ fontFamily: "monospace", fontSize: "10px", letterSpacing: "3px" }}>
-          {project.year}
-        </span>
-      </div>
-
-      <h3 className="mb-4 text-white" style={{ fontFamily: "var(--font-cinzel)", fontSize: "clamp(20px, 2vw, 26px)", fontWeight: 700 }}>
-        {project.title}
+      <h3
+        className="mb-5 text-white/50 group-hover:text-white/80 transition-colors"
+        style={{ fontFamily: "monospace", fontSize: "9px", letterSpacing: "5px", textTransform: "uppercase" }}
+      >
+        {group.category}
       </h3>
 
-      <p className="text-white/42 leading-relaxed mb-8" style={{ fontFamily: "var(--font-body)", fontSize: "14px", lineHeight: 1.75 }}>
-        {project.description}
-      </p>
-
-      <div className="flex flex-wrap gap-2 mb-8">
-        {project.tech.map((t) => (
-          <span key={t} className="px-2.5 py-1 border border-white/10 text-white/35 text-xs" style={{ fontFamily: "monospace", letterSpacing: "1px" }}>
-            {t}
+      <div className="flex flex-wrap gap-2">
+        {group.items.map((item) => (
+          <span
+            key={item}
+            className="text-white/70 group-hover:text-white transition-colors"
+            style={{ fontFamily: "var(--font-body)", fontSize: "15px", fontWeight: 500 }}
+          >
+            {item}
+            <span className="text-white/15 ml-1">/</span>
           </span>
         ))}
       </div>
 
-      <div className="flex gap-6">
-        {project.github !== "#" && (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/35 hover:text-white text-xs uppercase tracking-widest transition-colors flex items-center gap-2"
-            style={{ fontFamily: "monospace" }}
-          >
-            GitHub ↗
-          </a>
-        )}
-        {project.demo !== "#" && (
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#c0392b]/60 hover:text-[#c0392b] text-xs uppercase tracking-widest transition-colors flex items-center gap-2"
-            style={{ fontFamily: "monospace" }}
-          >
-            Live ↗
-          </a>
-        )}
-      </div>
-
+      {/* Hover glow */}
       <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{ boxShadow: "inset 0 0 40px rgba(192,57,43,0.04)" }} />
+      {/* Bottom accent */}
       <div className="absolute bottom-0 left-0 w-0 h-px bg-[#c0392b] group-hover:w-full transition-all duration-500" />
     </div>
   )
@@ -130,6 +63,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
+  const originRef = useRef<HTMLDivElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -138,8 +72,12 @@ export default function Projects() {
         y: 30, opacity: 0, duration: 0.8, ease: "power3.out",
         scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
       })
+      gsap.from(originRef.current, {
+        y: 40, opacity: 0, duration: 0.8, ease: "power3.out",
+        scrollTrigger: { trigger: originRef.current, start: "top 85%" },
+      })
       gsap.from(gridRef.current?.children ?? [], {
-        y: 50, opacity: 0, duration: 0.8, stagger: 0.15, ease: "power3.out",
+        y: 40, opacity: 0, duration: 0.7, stagger: 0.1, ease: "power3.out",
         scrollTrigger: { trigger: gridRef.current, start: "top 80%" },
       })
     }, sectionRef)
@@ -148,32 +86,62 @@ export default function Projects() {
   }, [])
 
   return (
-    <section id="projects" ref={sectionRef} className="relative min-h-screen flex flex-col justify-center px-8 md:px-20 py-32 overflow-hidden">
+    <section
+      id="projects"
+      ref={sectionRef}
+      className="relative min-h-screen flex flex-col justify-center px-8 md:px-20 py-32 overflow-hidden"
+    >
+      {/* BG number */}
       <div
         className="absolute left-0 top-1/2 -translate-y-1/2 select-none pointer-events-none"
-        style={{ fontSize: "clamp(120px, 20vw, 280px)", color: "rgba(255,255,255,0.02)", fontFamily: "var(--font-cinzel)", lineHeight: 1 }}
+        style={{ fontSize: "clamp(100px, 18vw, 260px)", color: "rgba(255,255,255,0.02)", fontFamily: "var(--font-cinzel)", lineHeight: 1 }}
       >
         02
       </div>
 
-      <div ref={headerRef} className="flex items-center gap-4 mb-16 relative z-10">
-        <span className="block w-8 h-px bg-[#c0392b]" />
-        <span className="text-white/30 uppercase" style={{ fontFamily: "monospace", fontSize: "9px", letterSpacing: "5px" }}>
-          Projets
-        </span>
-      </div>
+      <div className="max-w-5xl w-full relative z-10">
+        {/* Header */}
+        <div ref={headerRef}>
+          <div className="flex items-center gap-4 mb-5">
+            <span className="block w-8 h-px bg-[#c0392b]" />
+            <span className="text-white/30 uppercase" style={{ fontFamily: "monospace", fontSize: "9px", letterSpacing: "5px" }}>
+              Arsenal — 02
+            </span>
+          </div>
+          <h2 className="mb-3 leading-none" style={{ fontFamily: "var(--font-cinzel)", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 900, letterSpacing: "-1px" }}>
+            ZANPAKUTO
+          </h2>
+          <p className="text-white/28 mb-16" style={{ fontFamily: "monospace", fontSize: "11px", letterSpacing: "2px" }}>
+            Les outils. Les armes. Ce qui permet de construire.
+          </p>
+        </div>
 
-      <h2 className="mb-4 max-w-xl relative z-10" style={{ fontFamily: "var(--font-cinzel)", fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 700 }}>
-        Ce que j'ai <span style={{ color: "#c0392b" }}>forgé.</span>
-      </h2>
-      <p className="text-white/25 mb-16 relative z-10" style={{ fontFamily: "monospace", fontSize: "11px", letterSpacing: "2px" }}>
-        La plupart des dossiers sont scellés. C'est normal.
-      </p>
+        {/* Origin card — Slayers Online */}
+        <div
+          ref={originRef}
+          className="relative border border-[#c0392b]/20 bg-[#c0392b]/[0.03] p-7 mb-px"
+        >
+          <div className="flex items-start justify-between mb-4">
+            <span className="text-[#c0392b]/50 border border-[#c0392b]/20 px-2 py-0.5" style={{ fontFamily: "monospace", fontSize: "9px", letterSpacing: "3px" }}>
+              ORIGINE
+            </span>
+            <span className="text-white/20" style={{ fontFamily: "monospace", fontSize: "10px" }}>Ado</span>
+          </div>
+          <h3 className="mb-2" style={{ fontFamily: "var(--font-cinzel)", fontSize: "18px", fontWeight: 700, color: "rgba(255,255,255,0.7)" }}>
+            Slayers Online
+          </h3>
+          <p className="text-white/38 max-w-2xl" style={{ fontFamily: "var(--font-body)", fontSize: "14px", lineHeight: 1.75 }}>
+            Contribution à un MMORPG 2D pixelisé en JavaScript. Premier contact avec la logique serveur, les états temps réel, la persistance. C'est ça qui a tout déclenché — pas une école, pas un tutoriel. Un jeu.
+          </p>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-[#c0392b]/15" />
+        </div>
 
-      <div ref={gridRef} className="grid md:grid-cols-2 xl:grid-cols-3 gap-px relative z-10">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        {/* Tech grid */}
+        <div ref={gridRef} className="grid sm:grid-cols-2 xl:grid-cols-4 gap-px mt-px">
+          {skills.map((group) => (
+            <TechCard key={group.category} group={group} />
+          ))}
+        </div>
       </div>
     </section>
   )

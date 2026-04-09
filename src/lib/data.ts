@@ -109,6 +109,5 @@ export const bio = {
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/hydross77" },
-  { label: "MALT", href: "https://www.malt.fr" },
   { label: "Email", href: "mailto:tiffany.dellmann@gmail.com" },
 ]
