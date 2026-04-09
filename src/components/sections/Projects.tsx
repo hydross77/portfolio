@@ -99,7 +99,7 @@ export default function Projects() {
         02
       </div>
 
-      <div className="max-w-5xl w-full relative z-10">
+      <div className="wrap relative z-10">
         {/* Header */}
         <div ref={headerRef}>
           <div className="flex items-center gap-4 mb-5">

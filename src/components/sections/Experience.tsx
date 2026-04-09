@@ -46,7 +46,7 @@ export default function Experience() {
         EXP
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-8 md:px-16">
+      <div className="wrap relative z-10">
         {/* Header */}
         <div ref={headerRef} className="flex items-center gap-4 mb-16">
           <span className="block w-8 h-px bg-[#c0392b]" />

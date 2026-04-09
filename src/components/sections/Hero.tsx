@@ -77,7 +77,7 @@ export default function Hero() {
       <div className="absolute top-0 bottom-0 w-px bg-white/[0.04] z-[2]" style={{ left: "8vw" }} />
 
       {/* Content */}
-      <div className="relative z-10 px-8 md:px-20 max-w-6xl w-full">
+      <div className="wrap relative z-10">
         {/* Label */}
         <div ref={labelRef} className="flex items-center gap-4 mb-8">
           <span className="block w-8 h-px bg-[#c0392b]" />

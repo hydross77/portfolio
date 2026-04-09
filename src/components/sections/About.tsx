@@ -46,8 +46,7 @@ export default function About() {
         01
       </div>
 
-      {/* Centered content wrapper */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-8 md:px-16">
+      <div className="wrap relative z-10">
         {/* Label */}
         <div className="flex items-center gap-4 mb-16">
           <span className="block w-8 h-px bg-[#c0392b]" />
