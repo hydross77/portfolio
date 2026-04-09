@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "00",
-    title: "Slayer Online",
+    title: "Slayers Online",
     description:
       "L'origine. Une contribution à Slayers Online, un MMORPG 2D pixelisé en JavaScript. Adolescente, sans formation, sans tutoriel — juste la curiosité de comprendre comment un monde en ligne fonctionne derrière. C'est ça qui a tout déclenché.",
     tech: ["JavaScript", "HTML", "CSS"],
@@ -57,11 +57,11 @@ export const experience = [
     current: true,
   },
   {
-    company: "MALT",
-    role: "Développeur Freelance",
+    company: "MALT — Freelance",
+    role: "Développeur Full-Stack & Automatisation",
     period: "En cours",
     description:
-      "Missions freelance full-stack et intégration IA pour des clients variés. Disponible pour de nouvelles missions.",
+      "Missions freelance variées : développement web, pipelines d'automatisation, intégration d'agents IA.",
     current: true,
   },
   {
@@ -87,6 +87,45 @@ export const experience = [
   },
 ]
 
+export const clients = [
+  {
+    sector: "Secteur Automobile",
+    tags: ["Symfony", "PHP", "Docker", "API REST"],
+    description:
+      "Refonte du back-office interne et migration vers une architecture API REST. Conteneurisation complète de l'environnement avec Docker. Gain de 60% sur les temps de déploiement.",
+  },
+  {
+    sector: "Secteur Médias & Communication",
+    tags: ["React", "n8n", "Claude", "Webhook"],
+    description:
+      "Intégration d'agents IA dans les workflows éditoriaux. Automatisation de la curation de contenu et des publications multi-canaux via n8n. Réduction de 4h de travail manuel quotidien.",
+  },
+  {
+    sector: "Secteur E-commerce",
+    tags: ["PHP", "Mercure", "WebSockets", "Symfony"],
+    description:
+      "Système de mise à jour temps réel des stocks et des commandes. Implémentation du protocole Mercure pour les notifications push. Stack Symfony 6 entièrement dockerisée.",
+  },
+  {
+    sector: "Secteur Immobilier",
+    tags: ["React", "Symfony", "Docker", "SEO"],
+    description:
+      "Plateforme d'annonces avec moteur de recherche avancé et back-office de gestion. Optimisation SEO technique poussée. Architecture découplée frontend/backend.",
+  },
+  {
+    sector: "Secteur Logistique & RH",
+    tags: ["Python", "Robocorp", "n8n", "Docker"],
+    description:
+      "Automatisation RPA des processus de saisie et de traitement de données. Pipelines Robocorp pour l'extraction et la consolidation de rapports. Gain estimé à 20h/semaine.",
+  },
+  {
+    sector: "Secteur Santé & Services",
+    tags: ["Symfony", "PHP", "API Platform", "React"],
+    description:
+      "Application de gestion de dossiers avec API Platform. Authentification multi-rôles, tableaux de bord temps réel, exports PDF automatisés.",
+  },
+]
+
 export const skills = [
   { category: "Frontend", items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind"] },
   { category: "Backend", items: ["PHP", "Symfony", "Python", "Mercure"] },
@@ -101,10 +140,9 @@ export const bio = {
   intro:
     "Je n'ai pas appris à coder en école. J'ai appris en contribuant à un jeu — Slayers Online, un MMORPG 2D pixelisé en JavaScript. J'avais l'âge où on joue, mais j'ai préféré comprendre comment ça marchait derrière.",
   about:
-    "Depuis, je n'ai pas arrêté. Tout en autodidacte, tout en natif. Pas de diplôme — juste de la curiosité compulsive et des nuits entières à débugger des trucs que je m'étais créés moi-même. Aujourd'hui je code, j'automatise, j'intègre de l'IA. J'ai bossé en agence, en studio créatif, en freelance sur MALT. Et j'ai monté ma propre agence web.",
+    "Depuis, je n'ai pas arrêté. Tout en autodidacte, tout en natif. Pas de diplôme — juste de la curiosité compulsive et des nuits entières à débugger des trucs que je m'étais créés moi-même. Aujourd'hui je code, j'automatise, j'intègre de l'IA. J'ai bossé en agence, en studio créatif, en freelance. Et j'ai monté ma propre agence web.",
   github: "https://github.com/hydross77",
   email: "tiffany.dellmann@gmail.com",
-  malt: "https://www.malt.fr",
 }
 
 export const socials = [
